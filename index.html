@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación Formulario de Contacto</title>
+	<link rel="stylesheet" type="text/css" href="Estilos/index.css">
+</head>
+
+<body>
+	<div id="contenedor">
+		<h1>Validación de Formulario de Contacto con JavaScript</h1>
+		<form method="get" id="formulario" name="formulario">
+			<fieldset>
+				<legend>Validando Formulario</legend>
+				<div class="input-group">
+					<label for="nombre">Usuario:</label>
+					<input type="text" id="nombre" placeholder="Ingrese su Nombre Completo">
+					<span id="nombre_error" class="mensaje_error"></span>
+				</div>
+				<div class="input-group">
+					<label for="correo">Correo:</label>
+					<input type="text" id="correo" placeholder="usuario@dominio.com">
+					<span id="correo_error" class="mensaje_error"></span>
+				</div>
+				<div class="input-group">
+					<label for="direccion">Dirección:</label>
+					<input type="text" name="direccion" id="direccion" placeholder="Ingrese su Dirección">
+					<span id="direccion_error" class="mensaje_error"></span>
+				</div>
+				<div class="input-group">
+					<label for="pais">País:</label>
+					<input type="text" name="pais" id="pais" placeholder="Ingrese su País">
+					<span id="pais_error" class="mensaje_error"></span>
+				</div>
+				<div class="input-group">
+					<label for="asunto">Asunto:</label>
+					<input type="text" id="asunto" placeholder="Título del Asunto">
+					<span id="asunto_error" class="mensaje_error"></span>
+				</div>
+				<div class="input-group">
+					<label for="web-site">Página Web/Blogger:</label>
+					<input type="text" name="web-site" id="web-site" placeholder="Ingrese el Sitio Web">
+					<span id="web-site_error" class="mensaje_error"></span>
+				</div>
+				<div class="input-group">
+					<label for="comentario">Escribe tu comentario:</label>
+					<textarea name="comentario" id="comentario" cols="70" rows="10" maxlength="1000"
+						placeholder="Escribe tu comentario" onkeypress="calcular()" onkeyup="calcular()"></textarea>
+					<center>
+						<p>Le quedan <span id="contador-char">1000</span> de 1000 caracteres.</p>
+					</center>
+					<span id="comentario_error" class="mensaje_error"></span>
+				</div>
+				<div id="botones">
+					<input type="submit" value="Enviar" style="font-weight: bold">
+					<input type="button" id="borrar" value="Borrar Todo" style="font-weight: bold">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<script src="Scripts/validacion.js"></script>
+</body>
+
+</html>
